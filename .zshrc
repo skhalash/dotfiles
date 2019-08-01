@@ -14,5 +14,7 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+alias tgrep='grep -rnIi --color'
+
 source $ZSH/oh-my-zsh.sh
 autoload -U compinit && compinit
