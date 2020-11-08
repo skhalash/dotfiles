@@ -14,7 +14,7 @@ brew cask install iterm2
 
 # Specify the preferences directory
 SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$SCRIPT_PATH/com.googlecode.iterm2.plist"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$SCRIPT_PATH/iterm2"
 
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
