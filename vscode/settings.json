@@ -1,0 +1,9 @@
+{
+    "go.formatTool": "goimports",
+    "editor.fontSize": 16,
+    "debug.console.fontSize": 16,
+    "workbench.colorTheme": "One Dark Pro",
+    "terminal.integrated.fontSize": 16,
+    "markdown.preview.fontSize": 16,
+    "files.insertFinalNewline": true
+}
