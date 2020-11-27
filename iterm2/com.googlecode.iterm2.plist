@@ -307,6 +307,8 @@
 				<key>Red Component</key>
 				<real>0.57647058823529407</real>
 			</dict>
+			<key>Brighten Bold Text</key>
+			<false/>
 			<key>Character Encoding</key>
 			<integer>4</integer>
 			<key>Close Sessions On End</key>
@@ -774,14 +776,14 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1680, 1050}}</string>
+		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{255, 747}</string>
+		<string>{214, 894}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>D8E6B019-1F81-4908-A7BE-754F1D4B55FF</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>9</integer>
+	<integer>15</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
