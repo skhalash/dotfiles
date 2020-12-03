@@ -29,7 +29,7 @@ cd vim
 ## dotfiles
 Either copy the dorfiles or create symlins:
 ```
-ln -sv “~/git/dotfiles/.zshrc” ~
-ln -sv “~/git/dotfiles/.vimrc” ~
-ln -sv “~/git/dotfiles/.gitconfig” ~
+ln -sv ~/git/dotfiles/.zshrc ~
+ln -sv ~/git/dotfiles/.vimrc ~
+ln -sv ~/git/dotfiles/.gitconfig ~
 ```
