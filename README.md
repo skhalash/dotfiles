@@ -14,6 +14,18 @@ cd iterm2
 ./iterm2.sh
 ```
 
+## oh-my-zsh
+```
+cd ohmyzsh
+./install.sh
+```
+
+## vim
+```
+cd vim
+./install.sh
+```
+
 ## dotfiles
 Either copy the dorfiles or create symlins:
 ```
