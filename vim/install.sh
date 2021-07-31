@@ -1,2 +1,3 @@
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir -p ~/.vim/pack
+git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
+git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go
