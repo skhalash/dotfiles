@@ -16,5 +16,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set autowrite
+
 map <C-n> :NERDTreeToggle<CR>
 
