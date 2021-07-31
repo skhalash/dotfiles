@@ -25,5 +25,3 @@ set autowrite
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
-
-map <C-n> :NERDTreeToggle<CR>
