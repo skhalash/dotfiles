@@ -15,7 +15,4 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-execute pathogen#infect()
-call pathogen#helptags()
-
 map <C-n> :NERDTreeToggle<CR>
