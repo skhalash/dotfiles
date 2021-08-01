@@ -18,6 +18,20 @@ set expandtab
 
 " vim-go
 
+" Go syntax highlighting
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+
+"  Auto formatting and importing
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+
+" Autocompletion after pressing .
+au filetype go inoremap <buffer> . .<C-x><C-o>
+
 " Remap leader to make it easily accessible
 let mapleader = ","
 
@@ -46,6 +60,7 @@ endfunction
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
 " NERDTree plugin specific commands
 nnoremap <C-g> :NERDTreeToggle<CR>
