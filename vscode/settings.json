@@ -2,8 +2,24 @@
     "go.formatTool": "goimports",
     "editor.fontSize": 16,
     "debug.console.fontSize": 16,
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Atom One Dark",
     "terminal.integrated.fontSize": 16,
     "markdown.preview.fontSize": 16,
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "editor.formatOnSave": true,
+    "explorer.confirmDragAndDrop": false,
+    "go.useLanguageServer": true,
+    "explorer.confirmDelete": false,
+    "editor.renderWhitespace": "all",
+    "gopls": {
+        "buildFlags": [
+            "-tags=wireinject"
+        ],
+        "experimentalWorkspaceModule": true
+    },
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast"
+    ],
+    "go.toolsManagement.autoUpdate": true
 }
