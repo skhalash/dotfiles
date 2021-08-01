@@ -18,22 +18,22 @@ set expandtab
 
 " vim-go
 
-" remap leader to make it easily accessible
+" Remap leader to make it easily accessible
 let mapleader = ","
 
-" all lists will be of type quickfix (no location lists)
+" All lists will be of type quickfix (no location lists)
 let g:go_list_type = "quickfix"
 
-" autosave before build
+" Autosave before build
 set autowrite
 
-" jump between errors in the quickfix list
+" Jump between errors in the quickfix list
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
 
-" go toolchain shortcuts
-" run :GoBuild or :GoTestCompile based on the go file
+" Go toolchain shortcuts
+" Run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
   let l:file = expand('%')
   if l:file =~# '^\f\+_test\.go$'
@@ -46,3 +46,16 @@ endfunction
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
+
+" NERDTree plugin specific commands
+nnoremap <C-g> :NERDTreeToggle<CR>
+
+" Start NERDTree. If a file is specified, move the cursor to its window.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
