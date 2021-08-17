@@ -187,5 +187,5 @@ let NERDTreeDirArrows = 1
 
 " Plugin: fzf
 nnoremap <silent> <C-f> :Files<CR>
-nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <C-b> :Buffers<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
