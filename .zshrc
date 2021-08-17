@@ -121,7 +121,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source <(kubectl completion zsh)
-source <(kyma completion zsh)
 
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 
