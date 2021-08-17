@@ -21,15 +21,13 @@ cd ohmyzsh
 ```
 
 ## vim
+Vim 8 package manager is used.
 ```
-cd vim
-./install.sh
+ln -s ~/.dotfiles/vim ~/.vim
 ```
 
 ## dotfiles
-Either copy the dorfiles or create symlins:
 ```
 ln -sv ~/git/dotfiles/.zshrc ~
-ln -sv ~/git/dotfiles/.vimrc ~
 ln -sv ~/git/dotfiles/.gitconfig ~
 ```
