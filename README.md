@@ -23,7 +23,7 @@ cd ohmyzsh
 ## vim
 Vim 8 package manager is used.
 ```
-ln -s ~/git/dotfiles/vim ~/.vim
+ln -sv ~/git/dotfiles/vim ~/.vim
 ```
 
 ## dotfiles
