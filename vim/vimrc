@@ -18,10 +18,14 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Navigating between buffers
 nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]b :blast<CR>
+
+" Easy expansion of the active file directory (%%)
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " Plugin: vim-go
 
