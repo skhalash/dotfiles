@@ -31,6 +31,9 @@ nnoremap <silent> ]b :blast<CR>
 " Easy expansion of the active file directory (%%)
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
+" Mute search highlighting
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
 " Plugin: vim-go
 
 " Go syntax highlighting
