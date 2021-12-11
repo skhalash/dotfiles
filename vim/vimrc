@@ -1,6 +1,7 @@
 set nocompatible
 
 colorscheme gruvbox
+set bg=dark
 
 syntax on
 filetype plugin indent on
