@@ -23,9 +23,13 @@ SPACESHIP_PROMPT_ORDER=(
   dir           # Current directory section
   host          # Hostname section
   git           # Git section (git_branch + git_status)
+  kubectl       # kubectl context selection
   exec_time     # Execution time
   char          # Prompt character
 )
+SPACESHIP_KUBECTL_SHOW=true
+SPACESHIP_KUBECTL_VERSION_SHOW=false
+SPACESHIP_KUBECONTEXT_SHOW=true
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
