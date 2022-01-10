@@ -17,6 +17,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="spaceship"
 
 # Spaceship configuration
+SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_PROMPT_ORDER=(
   time          # Time stamps section
   user          # Username section
@@ -30,7 +31,7 @@ SPACESHIP_PROMPT_ORDER=(
 SPACESHIP_KUBECTL_SHOW=true
 SPACESHIP_KUBECTL_VERSION_SHOW=false
 SPACESHIP_KUBECONTEXT_SHOW=true
-
+SPACESHIP_KUBECTL_SUFFIX=""
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
