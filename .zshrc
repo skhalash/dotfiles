@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/$HOME/go/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/go/bin:$HOME/go/bin:${KREW_ROOT:-$HOME/.krew}/bin:$PATH
 
 export FZF_BASE=/usr/local/bin/fzf
 if type rg &> /dev/null; then
