@@ -128,9 +128,3 @@ source <(kubectl completion zsh)
 source "$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 KUBE_PS1_SYMBOL_ENABLE="false"
-
-export CLOUDSDK_PYTHON="$(brew --prefix)/opt/python@3.8/libexec/bin/python"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
