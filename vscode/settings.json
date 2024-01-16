@@ -2,24 +2,71 @@
     "go.formatTool": "goimports",
     "editor.fontSize": 16,
     "debug.console.fontSize": 16,
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Default Light Modern",
     "terminal.integrated.fontSize": 16,
     "markdown.preview.fontSize": 16,
     "files.insertFinalNewline": true,
-    "editor.formatOnSave": true,
     "explorer.confirmDragAndDrop": false,
     "go.useLanguageServer": true,
     "explorer.confirmDelete": false,
     "editor.renderWhitespace": "all",
-    "gopls": {
-        "buildFlags": [
-            "-tags=wireinject"
-        ],
-        "experimentalWorkspaceModule": true
-    },
+    "gopls": { "ui.semanticTokens": true },
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
         "--fast"
     ],
-    "go.toolsManagement.autoUpdate": true
+    "go.toolsManagement.autoUpdate": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "redhat.telemetry.enabled": false,
+    "vs-kubernetes": {
+        "vs-kubernetes.crd-code-completion": "enabled",
+        "vs-kubernetes.ignore-recommendations": true
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "hediet.vscode-drawio.plugins": [
+        {"file":"/Users/I540988/git/tam-drawio/tam-drawio.js"}
+    ],
+    "hediet.vscode-drawio.knownPlugins": [
+        {
+            "pluginId": "file:///Users/I540988/git/tam-drawio/tam-drawio.js",
+            "fingerprint": "bcb0643f7f5ee0c4e7f2ebabe883e4c7f81ce7fdea126023bcbbc2773062c074",
+            "allowed": true
+        }
+    ],
+    "hediet.vscode-drawio.resizeImages": null,
+    "git.openRepositoryInParentFolders": "always",
+    "editor.semanticTokenColorCustomizations": {
+        "[Default Dark+]": {
+            "rules": {
+                "property.mandatory:xml": {
+                    "bold": true
+                },
+                "string.i18n:xml": {
+                    "italic": true
+                }
+            }
+        },
+        "[Default Light+]": {
+            "rules": {
+                "property.mandatory:xml": {
+                    "bold": true
+                },
+                "string.i18n:xml": {
+                    "italic": true
+                }
+            }
+        },
+        "[Default High Contrast]": {
+            "rules": {
+                "property.mandatory:xml": {
+                    "bold": true
+                },
+                "string.i18n:xml": {
+                    "italic": true
+                }
+            }
+        }
+    }
 }

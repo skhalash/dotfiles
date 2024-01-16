@@ -130,3 +130,7 @@ source <(kubectl completion zsh)
 autoload -U compinit && compinit
 
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
+
+source "$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
+KUBE_PS1_SYMBOL_ENABLE="false"
