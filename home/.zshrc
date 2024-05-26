@@ -1,6 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:/$HOME/go/bin:$PATH
 
+# Export path to root of dotfiles repo
+export DOTFILES=${DOTFILES:="$HOME/.dotfiles"}
+
+# Locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
 # Fuzzy finder configuration
 export FZF_BASE=/usr/local/bin/fzf
 if type rg &> /dev/null; then
