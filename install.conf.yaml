@@ -20,8 +20,9 @@
     - description: Installing zgen
       command: ./scripts/zgen
 
-    - description: Run ./scripts/bootstrap to bootstrap new machine
-      command: echo "bash $DOTFILES/scripts/bootstrap"
+    - description: Bootstrapping the machine
+      if: '[ `uname` = Darwin ]'
+      command: ./scripts/bootstrap.osx
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

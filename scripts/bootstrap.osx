@@ -45,17 +45,6 @@ export DOTFILES=${1:-"$HOME/.dotfiles"}
 GITHUB_REPO_URL_BASE="https://github.com/skhalash/dotfiles"
 HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
 
-on_start() {
-  info "This script will guide you through installing git, zsh and dofiles itself."
-  echo "It will not install anything without your direct agreement!"
-  echo
-  read -p "Do you want to proceed with installation? [y/N] " -n 1 answer
-  echo
-  if [ "${answer}" != "y" ]; then
-    exit
-  fi
-}
-
 install_homebrew() {
   info "Trying to detect installed Homebrew..."
 
@@ -105,45 +94,6 @@ install_git() {
   finish
 }
 
-install_zsh() {
-  info "Trying to detect installed Zsh..."
-
-  if ! _exists zsh; then
-    echo "Seems like you don't have Zsh installed!"
-    read -p "Do you agree to proceed with Zsh installation? [y/N] " -n 1 answer
-    echo
-    if [ "${answer}" != "y" ]; then
-      return
-    fi
-
-    info "Installing Zsh..."
-
-    if [ "$(uname)" = "Darwin" ]; then
-      brew install zsh zsh-completions
-    elif [ "$(uname)" = "Linux" ]; then
-      sudo apt install zsh
-    else
-      error "Error: Failed to install Zsh!"
-      return
-    fi
-  else
-    success "You already have Zsh installed. Skipping..."
-  fi
-
-  if _exists zsh && [[ -z "$ZSH_VERSION" ]]; then
-    info "Setting up Zsh as default shell..."
-
-    echo "The script will ask you the password for sudo:"
-    echo
-    echo "1) When changing your default shell via chsh -s"
-    echo
-
-    chsh -s "$(command -v zsh)" || error "Error: Cannot set Zsh as default shell!"
-  fi
-
-  finish
-}
-
 install_software() {
   if [ "$(uname)" != "Darwin" ]; then
     return
@@ -165,14 +115,6 @@ install_software() {
   finish
 }
 
-on_finish() {
-  echo
-  success "Setup was successfully done!"
-  success "Happy Coding!"
-  info "P.S: Don't forget to restart a terminal :)"
-  echo
-}
-
 on_error() {
   echo
   error "Wow... Something serious happened!"
@@ -183,12 +125,9 @@ on_error() {
 }
 
 main() {
-  on_start "$*"
   install_homebrew "$*"
   install_git "$*"
-  install_zsh "$*"
   install_software "$*"
-  on_finish "$*"
 }
 
 main "$*"

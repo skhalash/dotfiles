@@ -71,11 +71,6 @@ update_brew() {
   finish
 }
 
-on_finish() {
-  success "Done!"
-  success "Happy Coding!"
-}
-
 on_error() {
   error "Wow... Something serious happened!"
   error "Though, I don't know what really happened :("
@@ -88,7 +83,6 @@ main() {
 
   update_dotfiles "$*"
   update_brew "$*"
-  on_finish "$*"
 }
 
 main "$*"
