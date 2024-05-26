@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+
+# Get System Updates, update NPM packages and dotfiles
+# Source: https://github.com/sapegin/dotfiles/blob/master/setup/update.sh
+
+trap on_error SIGTERM
+
+e='\033'
+RESET="${e}[0m"
+BOLD="${e}[1m"
+CYAN="${e}[0;96m"
+RED="${e}[0;91m"
+YELLOW="${e}[0;93m"
+GREEN="${e}[0;92m"
+
+_exists() {
+  command -v "$1" > /dev/null 2>&1
+}
+
+# Success reporter
+info() {
+  echo -e "${CYAN}${*}${RESET}"
+}
+
+# Error reporter
+error() {
+  echo -e "${RED}${*}${RESET}"
+}
+
+# Success reporter
+success() {
+  echo -e "${GREEN}${*}${RESET}"
+}
+
+# End section
+finish() {
+  success "Done!"
+  echo
+  sleep 1
+}
+
+# Set directory
+export DOTFILES=${1:-"$HOME/.dotfiles"}
+
+update_dotfiles() {
+  info "Updating dotfiles..."
+
+  cd "$DOTFILES" || exit
+  git pull origin main
+  ./install --except shell
+  cd - > /dev/null 2>&1 || exit
+
+  info "Updating Zsh plugins..."
+  zgen selfupdate
+  zgen update
+
+  finish
+}
+
+update_brew() {
+  if ! _exists brew; then
+    return
+  fi
+
+  info "Updating Homebrew..."
+
+  brew update
+  brew upgrade
+  brew cleanup
+
+  finish
+}
+
+on_finish() {
+  success "Done!"
+  success "Happy Coding!"
+}
+
+on_error() {
+  error "Wow... Something serious happened!"
+  error "Though, I don't know what really happened :("
+  exit 1
+}
+
+main() {
+  echo "Before we proceed, please type your sudo password:"
+  sudo -v
+
+  update_dotfiles "$*"
+  update_brew "$*"
+  on_finish "$*"
+}
+
+main "$*"
