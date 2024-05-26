@@ -1,8 +1,8 @@
-# Installation
+t@github.com:skhalash/dotfiles.git# Installation
 
 ```bash
 # Clone dotfiles repo
-git clone https://github.com/skhalash/dotfiles.git $HOME/.dotfiles
+git clone git@github.com:skhalash/dotfiles.git $HOME/.dotfiles
 
 # Go to the dotfiles directory
 cd $HOME/.dotfiles
