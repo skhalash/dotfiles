@@ -1,0 +1,27 @@
+- defaults:
+    shell:
+      stdout: true
+      stderr: true
+
+- clean: ['~']
+
+- link:
+    ~/:
+      glob: true
+      path: home/.*
+      create: true
+      relink: true
+      force: true
+
+- shell:
+    - description: Installing submodules
+      command: git submodule update --init --recursive
+
+    - description: Installing zgen
+      command: ./scripts/zgen.sh
+
+    - description: Bootstrap new machine
+      command: echo "bash $DOTFILES/scripts/bootstrap.sh"
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
