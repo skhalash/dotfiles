@@ -1,23 +1,23 @@
 [submodule "vim/pack/plugins/start/gruvbox"]
-	path = home/.vim/vim/pack/plugins/start/gruvbox
+	path = home/.vim/pack/plugins/start/gruvbox
 	url = https://github.com/morhetz/gruvbox
 [submodule "vim/pack/plugins/start/fzf.vim"]
-	path = home/.vim/vim/pack/plugins/start/fzf.vim
+	path = home/.vim/pack/plugins/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
 [submodule "vim/pack/plugins/start/fzf"]
-	path = home/.vim/vim/pack/plugins/start/fzf
+	path = home/.vim/pack/plugins/start/fzf
 	url = https://github.com/junegunn/fzf.git
 [submodule "vim/pack/plugins/start/vim-go"]
-	path = home/.vim/vim/pack/plugins/start/vim-go
+	path = home/.vim/pack/plugins/start/vim-go
 	url = https://github.com/fatih/vim-go.git
 [submodule "vim/pack/plugins/start/vim-airline"]
-	path = home/.vim/vim/pack/plugins/start/vim-airline
+	path = home/.vim/pack/plugins/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
 [submodule "vim/pack/plugins/start/nerdtree"]
-	path = home/.vim/vim/pack/plugins/start/nerdtree
+	path = home/.vim/pack/plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
 [submodule "vim/pack/plugins/start/coc.nvim"]
-	path = home/.vim/vim/pack/plugins/start/coc.nvim
+	path = home/.vim/pack/plugins/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
 [submodule "dotbot"]
 	path = dotbot
