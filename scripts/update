@@ -51,8 +51,8 @@ update_dotfiles() {
   cd - > /dev/null 2>&1 || exit
 
   info "Updating Zsh plugins..."
-#  zgen selfupdate
-#  zgen update
+  zgen selfupdate
+  zgen update
 
   finish
 }

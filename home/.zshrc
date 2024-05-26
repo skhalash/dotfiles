@@ -36,6 +36,9 @@ echo "Creating a zgen save"
     # Theme
     zgen load spaceship-prompt/spaceship-prompt spaceship
 
+    # Files
+    zgen load $DOTFILES/lib
+
     # Save all to init script
     zgen save
 fi
@@ -50,6 +53,12 @@ SPACESHIP_PROMPT_ORDER=(
   kubectl_context # Kubectl context section
   exec_time       # Execution time
   char            # Prompt character
+)
+
+# Reset zgen on change
+ZGEN_RESET_ON_CHANGE=(
+  ${HOME}/.zshrc
+  ${DOTFILES}/lib/*.zsh
 )
 
 source <(kubectl completion zsh)
