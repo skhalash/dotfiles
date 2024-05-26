@@ -1,9 +1,11 @@
 tap "homebrew/bundle"
 
+brew "bat"
 brew "fzf"
 brew "go"
 brew "helm"
 brew "kubectx"
+brew "lsd"
 brew "node"
 brew "ripgrep"
 brew "tmux"
