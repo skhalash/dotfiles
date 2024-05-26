@@ -1,3 +1,9 @@
+# Autostart tmux, but not if we're in a tiny IDE terminal window
+if [[ $TERM_PROGRAM != "vscode" && $TERMINAL_EMULATOR != "JetBrains-JediTerm" ]]; then
+    ZSH_TMUX_AUTOSTART=true
+fi
+
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:/$HOME/go/bin:$PATH
 
@@ -17,6 +23,7 @@ if type rg &> /dev/null; then
 fi
 
 source "${HOME}/.zgen/zgen.zsh"
+
 if ! zgen saved; then
 echo "Creating a zgen save"
     zgen oh-my-zsh
@@ -25,6 +32,7 @@ echo "Creating a zgen save"
     zgen oh-my-zsh plugins/fzf
     zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/tmux
 
     # Custom plugins
     zgen load zsh-users/zsh-autosuggestions

@@ -6,6 +6,7 @@ brew "helm"
 brew "kubectx"
 brew "node"
 brew "ripgrep"
+brew "tmux"
 
 cask "font-fira-code"
 cask "font-fira-code-nerd-font"
