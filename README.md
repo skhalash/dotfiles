@@ -2,8 +2,7 @@
 
 ## oh-my-zsh
 ```
-cd ohmyzsh
-./install.sh
+scripts/zgen.sh
 ```
 
 ## vim
