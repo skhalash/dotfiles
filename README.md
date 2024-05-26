@@ -1,4 +1,4 @@
-t@github.com:skhalash/dotfiles.git# Installation
+# Installation
 
 ```bash
 # Clone dotfiles repo
@@ -8,5 +8,5 @@ git clone git@github.com:skhalash/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
 
 # Install dotfiles
-./install.sh
+./install
 ```
