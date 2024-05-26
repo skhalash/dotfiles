@@ -1,18 +1,14 @@
-# dotfiles
+# Installation
 
-## oh-my-zsh
-```
-scripts/zgen.sh
-```
+```bash
+Clone dotfiles repo:
 
-## vim
-Vim 8 package manager is used.
-```
-ln -sv ~/git/dotfiles/vim ~/.vim
-```
+# Clone dotfiles repo
+git clone https://github.com/denysdovhan/dotfiles.git $HOME/.dotfiles
 
-## dotfiles
-```
-ln -sv ~/git/dotfiles/.zshrc ~
-ln -sv ~/git/dotfiles/.gitconfig ~
-```
+# Go to the dotfiles directory
+cd $HOME/.dotfiles
+
+# Install dotfiles
+./install.sh
+```bash
