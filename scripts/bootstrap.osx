@@ -115,6 +115,22 @@ install_software() {
   finish
 }
 
+configure_iterm2() {
+  if [ "$(uname)" != "Darwin" ]; then
+    return
+  fi
+
+  info "Configuring iTerm2..."
+
+  # Don’t display the annoying prompt when quitting iTerm
+  defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+  
+  defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder 1
+  defaults write com.googlecode.iterm2.plist PrefsCustomFolder "$DOTFILES/iterm2"
+
+  finish
+}
+
 on_error() {
   echo
   error "Wow... Something serious happened!"
@@ -128,6 +144,7 @@ main() {
   install_homebrew "$*"
   install_git "$*"
   install_software "$*"
+  configure_iterm2 "$*"
 }
 
 main "$*"
