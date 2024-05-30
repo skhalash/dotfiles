@@ -7,9 +7,6 @@
 [submodule "vim/pack/plugins/start/fzf"]
 	path = home/.vim/pack/plugins/start/fzf
 	url = https://github.com/junegunn/fzf.git
-[submodule "vim/pack/plugins/start/vim-go"]
-	path = home/.vim/pack/plugins/start/vim-go
-	url = https://github.com/fatih/vim-go.git
 [submodule "vim/pack/plugins/start/vim-airline"]
 	path = home/.vim/pack/plugins/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
