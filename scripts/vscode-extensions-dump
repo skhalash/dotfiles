@@ -6,4 +6,4 @@ cd "$DOTFILES" || exit
 
 code --list-extensions > vscode/extensions.txt
 
-cd -
+cd - > /dev/null 2>&1 || exit

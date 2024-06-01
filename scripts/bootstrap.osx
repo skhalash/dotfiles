@@ -131,6 +131,24 @@ configure_iterm2() {
   finish
 }
 
+install_vscode_extensions() {
+  info "Installing VSCode extensions..."
+
+  local desired=$(<$DOTFILES/vscode/extensions.txt)
+  local current=$(code --list-extensions)
+
+  for extension in "${desired[@]}"; do
+    if echo "$current" | grep -qi "^$extension$"; then
+      info "$extension is already installed. Skipping..."
+    else
+      info "Installing $extension..."
+      code --install-extension "$extension"
+    fi
+  done
+
+  finish
+}
+
 on_error() {
   echo
   error "Wow... Something serious happened!"
@@ -145,6 +163,7 @@ main() {
   install_git "$*"
   install_software "$*"
   configure_iterm2 "$*"
+  install_vscode_extensions "$*"
 }
 
 main "$*"
