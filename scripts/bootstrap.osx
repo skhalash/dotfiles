@@ -141,7 +141,6 @@ install_vscode_extensions() {
     if echo "$current" | grep -qi "^$extension$"; then
       info "$extension is already installed. Skipping..."
     else
-      info "Installing $extension..."
       code --install-extension "$extension"
     fi
   done
