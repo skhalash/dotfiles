@@ -17,3 +17,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "home/.vim/pack/plugins/opt/lsp"]
+	path = home/.vim/pack/plugins/opt/lsp
+	url = https://github.com/yegappan/lsp
