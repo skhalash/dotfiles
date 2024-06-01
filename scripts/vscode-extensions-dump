@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Set directory
+export DOTFILES=${1:-"$HOME/.dotfiles"}
+cd "$DOTFILES" || exit
+
+code --list-extensions > vscode/extensions.txt
+
+cd -
