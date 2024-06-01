@@ -1,3 +1,4 @@
+akamud.vscode-theme-onedark
 eamodio.gitlens
 github.copilot
 github.copilot-chat
