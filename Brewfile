@@ -9,6 +9,7 @@ brew "kubectx"
 brew "lsd"
 brew "node"
 brew "ripgrep"
+brew "tldr"
 brew "tmux"
 
 cask "font-fira-code"
