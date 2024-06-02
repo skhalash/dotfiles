@@ -59,4 +59,67 @@ nnoremap <silent> <Leader>f :Rg<CR>
 
 # Plugin: lsp
 packadd lsp
-call LspAddServer([{name: 'golang', filetype: ['go', 'gomod'], path: 'gopls', args: ['serve'], syncInit: v:true }])
+
+
+var lspOpts = {
+  aleSupport: false,
+  autoComplete: true,
+  autoHighlight: true,
+  autoHighlightDiags: true,
+  autoPopulateDiags: false,
+  completionMatcher: 'case',
+  completionMatcherValue: 1,
+  diagSignErrorText: 'E>',
+  diagSignHintText: 'H>',
+  diagSignInfoText: 'I>',
+  diagSignWarningText: 'W>',
+  echoSignature: false,
+  hideDisabledCodeActions: false,
+  highlightDiagInline: true,
+  hoverInPreview: false,
+  ignoreMissingServer: false,
+  keepFocusInDiags: true,
+  keepFocusInReferences: true,
+  completionTextEdit: false,
+  diagVirtualTextAlign: 'above',
+  diagVirtualTextWrap: 'default',
+  noNewlineInCompletion: false,
+  omniComplete: true,
+  outlineOnRight: false,
+  outlineWinSize: 30,
+  semanticHighlight: true,
+  showDiagInBalloon: true,
+  showDiagInPopup: true,
+  showDiagOnStatusLine: false,
+  showDiagWithSign: true,
+  showDiagWithVirtualText: true,
+  showInlayHints: true,
+  showSignature: true,
+  snippetSupport: false,
+  ultisnipsSupport: false,
+  useBufferCompletion: false,
+  usePopupInCodeAction: true,
+  useQuickfixForLocations: false,
+  vsnipSupport: false,
+  bufferCompletionTimeout: 100,
+  customCompletionKinds: false,
+  completionKinds: {},
+  filterCompletionDuplicates: false,
+}
+
+
+var lspServers = [
+  {
+    name: 'golang',
+    filetype: ['go', 'gomod'],
+    path: 'gopls',
+    args: ['serve'],
+    syncInit: v:true,
+    initializationOptions: {
+      semanticTokens: true,
+    },
+  },
+]
+
+call LspOptionsSet(lspOpts)
+call LspAddServer(lspServers)
