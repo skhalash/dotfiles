@@ -21,7 +21,6 @@ return {
 					require("neotest-go"),
 				},
 				status = { virtual_text = true },
-				output = { open_on_run = true },
 			})
 			local neotest_ns = vim.api.nvim_create_namespace("neotest")
 			vim.diagnostic.config({
