@@ -16,7 +16,13 @@
     ~/Library/Application Support/Code/User/settings.json: 
       if: '[ `uname` = Darwin ]'
       path: vscode/settings.json
+      create: true
+      relink: true
+      force: true
     ~/Library/Application Support/Code/User/keybindings.json:
+      create: true
+      relink: true
+      force: true
       if: '[ `uname` = Darwin ]'
       path: vscode/keybindings.json
 
