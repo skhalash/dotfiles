@@ -15,6 +15,12 @@ alias dotfiles="cd $DOTFILES"
 # Quick reload of zsh environment
 alias reload="source $HOME/.zshrc"
 
+# Neovim aliases
+alias vi="nvim"
+alias vim="nvim"
+alias view="nvim -R"
+alias vimdiff="nvim -d"
+
 # Dump dump currently installed vscode extensions to dotfiles
 alias vscode-dump="source $DOTFILES/scripts/vscode-extensions-dump"
 
