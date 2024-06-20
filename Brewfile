@@ -1,6 +1,5 @@
 tap "homebrew/bundle"
 
-brew "bat"
 brew "fzf"
 brew "go"
 brew "gopls"
