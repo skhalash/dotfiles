@@ -49,6 +49,8 @@ require("lazy").setup({
 	require("kickstart/plugins/treesitter"),
 
 	require("kickstart/plugins/oil"),
+
+	require("kickstart/plugins/test"),
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
