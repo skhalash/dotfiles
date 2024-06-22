@@ -7,11 +7,15 @@
   type = cat-file -t
   dump = cat-file -p
 [user]
-	email = stanislav.khalash@sap.com
-	name = Stanislav Khalash
+  email = stanislav.khalash@sap.com
+  name = Stanislav Khalash
 [core]
-	editor = vim
-[commit]
-#	gpgsign = true
+  editor = vim
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
+[merge]
+  tool = vimdiff
 [pull]
-	rebase = false
+  rebase = false
