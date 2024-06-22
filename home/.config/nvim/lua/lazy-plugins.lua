@@ -30,6 +30,8 @@ require("lazy").setup({
 
 	require("kickstart/plugins/gitsigns"),
 
+	require("kickstart/plugins/term"),
+
 	require("kickstart/plugins/which-key"),
 
 	require("kickstart/plugins/telescope"),
@@ -49,6 +51,8 @@ require("lazy").setup({
 	require("kickstart/plugins/treesitter"),
 
 	require("kickstart/plugins/oil"),
+
+	require("kickstart/plugins/debug"),
 
 	require("kickstart/plugins/test"),
 }, {
