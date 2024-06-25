@@ -72,4 +72,6 @@ ZGEN_RESET_ON_CHANGE=(
 source <(kubectl completion zsh)
 autoload -U compinit && compinit
 
+bindkey '^y' autosuggest-accept
+
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
