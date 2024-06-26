@@ -165,7 +165,7 @@ return {
 				gopls = {
 					settings = {
 						gopls = {
-							buildFlags = { "-tags=e2e,istio" },
+							buildFlags = { "-tags=e2e,istio,tools" },
 							["ui.inlayhint.hints"] = {
 								compositeLiteralFields = true,
 								parameterNames = true,
