@@ -65,6 +65,11 @@ return {
 					find_files = {
 						find_command = { "rg", "--files", "--hidden", "-g", "!.git" },
 					},
+					live_grep = {
+						additional_args = function()
+							return { "--hidden", "-g", "!.git" }
+						end,
+					},
 				},
 				extensions = {
 					["ui-select"] = {
