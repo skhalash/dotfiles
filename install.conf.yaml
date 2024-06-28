@@ -1,4 +1,8 @@
 - defaults:
+    link:
+      create: true
+      force: true
+      relink: true
     shell:
       stdout: true
       stderr: true
@@ -6,12 +10,10 @@
 - clean: ['~']
 
 - link:
-    ~/:
-      glob: true
-      path: home/.*
-      create: true
-      relink: true
-      force: true
+    ~/.config/nvim:
+    ~/.gitconfig:
+    ~/.tmux.conf:
+    ~/.zshrc:
 
     ~/Library/Application Support/Code/User/settings.json: 
       if: '[ `uname` = Darwin ]'
