@@ -1,3 +1,8 @@
+# Run 'time ZSH_DEBUGRC=1 zsh -i -c exit' to profile zshrc
+if [ -n "${ZSH_DEBUGRC+1}" ]; then
+      zmodload zsh/zprof
+fi
+
 # Autostart tmux, but not if we're in a tiny IDE terminal window
 if [[ $TERM_PROGRAM != "vscode" && $TERMINAL_EMULATOR != "JetBrains-JediTerm" ]]; then
     ZSH_TMUX_AUTOSTART=true
@@ -73,3 +78,7 @@ autoload -U compinit && compinit
 bindkey '^y' autosuggest-accept
 
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
+
+if [ -n "${ZSH_DEBUGRC+1}" ]; then
+    zprof
+fi
