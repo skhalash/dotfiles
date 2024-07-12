@@ -30,8 +30,6 @@ echo "Creating a zgen save"
 
     # Oh-My-Zsh plugins
     zgen oh-my-zsh plugins/fzf
-    zgen oh-my-zsh plugins/git
-    zgen oh-my-zsh plugins/sudo
     zgen oh-my-zsh plugins/tmux
 
     # Custom plugins
