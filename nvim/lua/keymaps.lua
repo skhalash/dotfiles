@@ -17,20 +17,20 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 --
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
-vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
-vim.keymap.set("n", "<leader>tf", "<cmd>:ToggleTerm direction=float<cr>", { desc = "ToggleTerm float" })
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit [T]erminal mode" })
+vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "[T]oggle [T]erminal" })
+vim.keymap.set("n", "<leader>tf", "<cmd>:ToggleTerm direction=float<cr>", { desc = "[T]oggle [F]loating Terminal" })
 vim.keymap.set(
 	"n",
 	"<leader>th",
 	"<cmd>:ToggleTerm size=10 direction=horizontal<cr>",
-	{ desc = "ToggleTerm horizontal split" }
+	{ desc = "[T]oggle [H]orizontal Terminal split" }
 )
 vim.keymap.set(
 	"n",
 	"<leader>tv",
 	"<cmd>:ToggleTerm size=80 direction=vertical<cr>",
-	{ desc = "ToggleTerm vertical split" }
+	{ desc = "[T]oggle [V]ertical Terminal split" }
 )
 
 -- TIP: Disable arrow keys in normal mode
