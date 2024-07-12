@@ -29,3 +29,5 @@ if _exists lsd; then
       alias ls='lsd'
         alias lt='lsd --tree'
 fi
+
+alias lg='lazygit'
