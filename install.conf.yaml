@@ -12,6 +12,7 @@
 - link:
     ~/.config/nvim:
     ~/.gitconfig:
+    ~/.tmux:
     ~/.tmux.conf:
     ~/.zshrc:
 
