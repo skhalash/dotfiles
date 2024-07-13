@@ -1,3 +1,5 @@
 .idea/
 Brewfile.lock.json
-tmux/plugins/tmux
+tmux/plugins/
+
+!tmux/plugins/tmp/
