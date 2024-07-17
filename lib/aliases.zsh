@@ -31,3 +31,7 @@ if _exists lsd; then
 fi
 
 alias lg='lazygit'
+
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+    alias nvim=nvr -cc split --remote-wait +'set bufhidden=wipe'
+fi
