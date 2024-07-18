@@ -57,6 +57,8 @@ require("lazy").setup({
 	require("kickstart/plugins/test"),
 
 	require("kickstart/plugins/lazygit"),
+
+	require("kickstart/plugins/copilot"),
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
