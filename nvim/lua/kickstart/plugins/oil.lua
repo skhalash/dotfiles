@@ -13,9 +13,9 @@ return {
 					return vim.startswith(name, ".")
 				end,
 				-- This function defines what will never be shown, even when `show_hidden` is set
-				is_always_hidden = function(name)
-					return vim.startswith(name, ".git")
-				end,
+				-- is_always_hidden = function(name)
+				-- 	return vim.startswith(name, ".git")
+				-- end,
 			},
 		})
 	end,
