@@ -19,6 +19,9 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:/$HOME/go/bin:$PATH
 
+# Add Homebrew to PATH on Apple Silicon
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Export path to root of dotfiles repo
 export DOTFILES=${DOTFILES:="$HOME/.dotfiles"}
 
@@ -78,6 +81,7 @@ ZGEN_RESET_ON_CHANGE=(
 
 source <(kubectl completion zsh)
 autoload -U compinit && compinit
+compinit
 
 bindkey '^y' autosuggest-accept
 
