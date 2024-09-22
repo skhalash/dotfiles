@@ -79,9 +79,7 @@ ZGEN_RESET_ON_CHANGE=(
   ${DOTFILES}/lib/*.zsh
 )
 
-source <(kubectl completion zsh)
-autoload -U compinit && compinit
-compinit
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 bindkey '^y' autosuggest-accept
 
