@@ -1,0 +1,31 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-t": "workspace::ToggleBottomDock",
+      "cmd-n": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "space f": "editor::Format",
+      "space c a": "editor::ToggleCodeActions",
+      "space r n": "editor::Rename",
+      "space g r": "editor::FindAllReferences"
+    }
+  }
+]

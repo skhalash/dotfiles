@@ -11,6 +11,9 @@
 
 - link:
     ~/.config/nvim:
+    ~/.config/zed:
+      exclude:
+        zed/conversations/
     ~/.gitconfig:
     ~/.tmux:
     ~/.tmux.conf:
