@@ -12,11 +12,16 @@
 - link:
     ~/.config/nvim:
     ~/.config/zed:
+      glob: true
+      path: zed/*
       exclude:
-        zed/conversations/
-        zed/prompts/
+      - zed/conversations/
+      - zed/prompts/
     ~/.config/k9s:
-        k9s/cluster/
+      glob: true
+      path: k9s/*
+      exclude:
+      - k9s/clusters/
     ~/.gitconfig:
     ~/.tmux:
     ~/.tmux.conf:
