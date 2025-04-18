@@ -15,6 +15,10 @@
     "version": "2"
   },
   "vim_mode": true,
+  "vim": {
+    "use_smartcase_find": true,
+    "highlight_on_yank_duration": 50
+  },
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "theme": {
@@ -24,5 +28,6 @@
   },
   "features": {
     "edit_prediction_provider": "copilot"
-  }
+  },
+  "relative_line_numbers": true
 }
