@@ -1,0 +1,24 @@
+plugins:
+  # Sends logs over to jq
+  jqlogs:
+    shortCut: Ctrl-J
+    confirm: false
+    description: "Logs (jq)"
+    scopes:
+      - po
+    command: sh
+    background: false
+    args:
+      - -c
+      - "kubectl logs $NAME -n $NAMESPACE --context $CONTEXT | jq -r . | bat"
+  watch-events:
+    shortCut: Shift-E
+    confirm: false
+    description: "Watch events"
+    scopes:
+      - all
+    command: sh
+    background: false
+    args:
+      - -c
+      - "watch -n 5 kubectl get events --context $CONTEXT --namespace $NAMESPACE --field-selector involvedObject.name=$NAME"

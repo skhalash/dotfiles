@@ -19,6 +19,9 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:/$HOME/go/bin:$PATH
 
+# Set k9s config path
+export K9S_CONFIG_DIR=$HOME/.config/k9s
+
 # Add Homebrew to PATH on Apple Silicon
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -38,6 +41,7 @@ fi
 
 export FZF_DEFAULT_OPTS='-m --height 50%'
 
+# Set FZF Solarized Light color scheme
 _gen_fzf_color_opts() {
   local base03="234"
   local base02="235"
