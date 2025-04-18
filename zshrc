@@ -40,57 +40,37 @@ if type rg &> /dev/null; then
 fi
 
 export FZF_DEFAULT_OPTS='-m --height 50%'
+# Set FZF Catppuccin color scheme
+# https://github.com/catppuccin/fzf
+_set_fzf_catppuccin_colors() {
+      # Detect system appearance mode (dark or light)
+      local appearance_mode
+      if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
+        appearance_mode="dark"
+      else
+        appearance_mode="light"
+      fi
 
-# Set FZF Solarized Light color scheme
-_gen_fzf_color_opts() {
-  local base03="234"
-  local base02="235"
-  local base01="240"
-  local base00="241"
-  local base0="244"
-  local base1="245"
-  local base2="254"
-  local base3="230"
-  local yellow="136"
-  local orange="166"
-  local red="160"
-  local magenta="125"
-  local violet="61"
-  local blue="33"
-  local cyan="37"
-  local green="64"
-  # Uncomment for truecolor, if your terminal supports it.
-  # local base03="#002b36"
-  # local base02="#073642"
-  # local base01="#586e75"
-  # local base00="#657b83"
-  # local base0="#839496"
-  # local base1="#93a1a1"
-  # local base2="#eee8d5"
-  # local base3="#fdf6e3"
-  # local yellow="#b58900"
-  # local orange="#cb4b16"
-  # local red="#dc322f"
-  # local magenta="#d33682"
-  # local violet="#6c71c4"
-  # local blue="#268bd2"
-  # local cyan="#2aa198"
-  # local green="#859900"
-
-  # Comment and uncomment below for the light theme.
-
-  # Solarized Dark color scheme for fzf
-  # export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"
-  #   --color fg:-1,bg:-1,hl:$blue,fg+:$base2,bg+:$base02,hl+:$blue
-  #   --color info:$yellow,prompt:$yellow,pointer:$base3,marker:$base3,spinner:$yellow"
-
-  ## Solarized Light color scheme for fzf
-  export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"
-  --color fg:-1,bg:-1,hl:$blue,fg+:$base02,bg+:$base2,hl+:$blue
-  --color info:$yellow,prompt:$yellow,pointer:$base03,marker:$base03,spinner:$yellow"
+      if [[ $appearance_mode == "light" ]]; then
+        # Catppuccin Mocha (Dark) color scheme for fzf
+        export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+        --color=bg+:#ccd0da,bg:#eff1f5,spinner:#dc8a78,hl:#d20f39 \
+        --color=fg:#4c4f69,header:#d20f39,info:#8839ef,pointer:#dc8a78 \
+        --color=marker:#7287fd,fg+:#4c4f69,prompt:#8839ef,hl+:#d20f39 \
+        --color=selected-bg:#bcc0cc \
+        --color=border:#ccd0da,label:#4c4f69"
+      else
+        # Catppuccin Latte (Light) color scheme for fzf
+        export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+        --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+        --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+        --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+        --color=selected-bg:#45475a \
+        --color=border:#313244,label:#cdd6f4"
+     fi
 }
 
-_gen_fzf_color_opts
+_set_fzf_catppuccin_colors
 
 source "${HOME}/.zgen/zgen.zsh"
 
