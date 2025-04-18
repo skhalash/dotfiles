@@ -23,8 +23,8 @@
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Light Hard",
-    "dark": "One Dark"
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Frappé"
   },
   "features": {
     "edit_prediction_provider": "copilot"
