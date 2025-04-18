@@ -20,12 +20,25 @@
     }
   },
   {
-    "context": "Editor && vim_mode == normal && !menu",
+    "context": "vim_mode == normal && !menu",
     "bindings": {
       "space f": "editor::Format",
       "space c a": "editor::ToggleCodeActions",
       "space r n": "editor::Rename",
       "space g r": "editor::FindAllReferences"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": "vim::PushSneak",
+      "shift-s": "vim::PushSneakBackward"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": ["vim::PushAddSurrounds", {}]
     }
   }
 ]
