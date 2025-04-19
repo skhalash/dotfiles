@@ -10,6 +10,7 @@
 - clean: ['~']
 
 - link:
+    ~/.config/lsd:
     ~/.config/nvim:
     ~/.config/zed:
       glob: true
