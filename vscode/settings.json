@@ -51,5 +51,5 @@
   "markdown.preview.fontSize": 16,
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.fontSize": 16,
-  "workbench.colorTheme": "Atom One Dark"
+  "workbench.colorTheme": "Default Light Modern"
 }
