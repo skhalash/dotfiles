@@ -7,6 +7,13 @@
 // from the command palette.
 [
   {
+    "context": "Editor  && edit_prediction",
+    "bindings": {
+      "ctrl-n": "editor::NextEditPrediction",
+      "ctrl-p": "editor::PreviousEditPrediction"
+    }
+  },
+  {
     "context": "Workspace",
     "bindings": {
       "cmd-t": "terminal_panel::ToggleFocus"
