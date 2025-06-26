@@ -7,27 +7,38 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "assistant": {
+  "agent": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "model": "gpt-4.1",
+      "provider": "copilot_chat"
     },
     "version": "2"
   },
-  "vim_mode": true,
-  "vim": {
-    "use_smartcase_find": true,
-    "highlight_on_yank_duration": 50
-  },
-  "ui_font_size": 16,
   "buffer_font_size": 16,
-  "theme": {
-    "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Frappé"
-  },
   "features": {
     "edit_prediction_provider": "copilot"
   },
-  "relative_line_numbers": true
+  "lsp": {
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "schemaStore": {
+            "enable": false
+          }
+        }
+      }
+    }
+  },
+  "relative_line_numbers": true,
+  "theme": {
+    "dark": "Catppuccin Frappé",
+    "light": "Catppuccin Latte",
+    "mode": "system"
+  },
+  "ui_font_size": 16,
+  "vim": {
+    "highlight_on_yank_duration": 50,
+    "use_smartcase_find": true
+  },
+  "vim_mode": true
 }
