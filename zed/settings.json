@@ -12,7 +12,6 @@
       "model": "gpt-4.1",
       "provider": "copilot_chat"
     },
-    "version": "2"
   },
   "buffer_font_size": 16,
   "features": {
