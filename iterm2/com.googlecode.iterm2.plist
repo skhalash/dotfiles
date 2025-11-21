@@ -2658,6 +2658,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>37FC88C7-97FE-42F3-808F-44F36D8E6EAE</string>
+	<key>Default Browser Profile Guid</key>
+	<string>FBC12331-B66E-4756-941F-0A2BB25BE04C</string>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
