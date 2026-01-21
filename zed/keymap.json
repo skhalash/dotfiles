@@ -32,7 +32,7 @@
     "bindings": {
       "ctrl-n": "editor::NextEditPrediction",
       "ctrl-p": "editor::PreviousEditPrediction",
-      "ctrl-cmd-right": "editor::AcceptPartialEditPrediction"
+      "ctrl-cmd-right": "editor::AcceptNextWordEditPrediction"
     }
   },
   {

@@ -8,38 +8,48 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "agent": {
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5"
+      "model": "claude-haiku-4.5",
     },
-    "model_parameters": []
+    "model_parameters": [],
   },
   "buffer_font_size": 16,
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "copilot",
+  },
+  "file_types": {
+    "Helm": [
+      "**/templates/**/*.tpl",
+      "**/templates/**/*.yaml",
+      "**/templates/**/*.yml",
+      "**/helmfile.d/**/*.yaml",
+      "**/helmfile.d/**/*.yml",
+      "**/values*.yaml",
+    ],
   },
   "lsp": {
     "yaml-language-server": {
       "settings": {
         "yaml": {
           "schemaStore": {
-            "enable": false
-          }
-        }
-      }
-    }
+            "enable": false,
+          },
+        },
+      },
+    },
   },
   "relative_line_numbers": "enabled",
   "theme": {
     "dark": "Catppuccin Frappé",
     "light": "Catppuccin Latte",
-    "mode": "system"
+    "mode": "system",
   },
   "ui_font_size": 16,
   "vim": {
     "highlight_on_yank_duration": 50,
-    "use_smartcase_find": true
+    "use_smartcase_find": true,
   },
-  "vim_mode": true
+  "vim_mode": true,
 }
