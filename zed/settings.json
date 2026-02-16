@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "provider": "copilot"
+  },
   "agent": {
     "default_profile": "write",
     "default_model": {
@@ -16,9 +19,6 @@
     "model_parameters": [],
   },
   "buffer_font_size": 16,
-  "features": {
-    "edit_prediction_provider": "copilot",
-  },
   "file_types": {
     "Helm": [
       "**/templates/**/*.tpl",

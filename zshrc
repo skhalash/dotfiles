@@ -17,7 +17,7 @@ else
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/$HOME/go/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:/$HOME/go/bin:$PATH
 
 # Set k9s config path
 export K9S_CONFIG_DIR=$HOME/.config/k9s
