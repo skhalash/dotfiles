@@ -120,6 +120,8 @@ bindkey '^y' autosuggest-accept
 
 [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 
+eval "$(direnv hook zsh)"
+
 if [ -n "${ZSH_DEBUGRC+1}" ]; then
     zprof
 fi

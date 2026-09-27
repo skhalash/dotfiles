@@ -1,4 +1,5 @@
 tap "homebrew/bundle"
+brew "direnv"
 brew "fzf"
 brew "go"
 brew "gopls"
