@@ -49,5 +49,3 @@
       if: '[ `uname` = Darwin ]'
       command: ./scripts/bootstrap.osx
 
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]

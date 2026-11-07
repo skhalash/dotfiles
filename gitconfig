@@ -7,17 +7,21 @@
   type = cat-file -t
   dump = cat-file -p
 	sync = "!f() { git fetch --tags --force && git pull --ff-only upstream main && git push origin main; };f"
+  l    = log --oneline --graph --decorate -20
+  undo = reset HEAD~1 --mixed
 [user]
   email = stanislav.khalash@sap.com
   name = Stanislav Khalash
 [core]
-  editor = vim
+  editor = nvim
 [diff]
   tool = vimdiff
 [difftool]
   prompt = false
 [merge]
   tool = vimdiff
+[init]
+  defaultBranch = main
 [pull]
   rebase = false
 [push]

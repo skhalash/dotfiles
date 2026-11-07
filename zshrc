@@ -34,7 +34,7 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
 # Fuzzy finder configuration
-export FZF_BASE=/usr/local/bin/fzf
+export FZF_BASE=/opt/homebrew/bin/fzf
 if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files'
 fi
@@ -52,7 +52,7 @@ _set_fzf_catppuccin_colors() {
       fi
 
       if [[ $appearance_mode == "light" ]]; then
-        # Catppuccin Mocha (Dark) color scheme for fzf
+        # Catppuccin Latte (Light) color scheme for fzf
         export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
         --color=bg+:#ccd0da,bg:#eff1f5,spinner:#dc8a78,hl:#d20f39 \
         --color=fg:#4c4f69,header:#d20f39,info:#8839ef,pointer:#dc8a78 \
@@ -60,7 +60,7 @@ _set_fzf_catppuccin_colors() {
         --color=selected-bg:#bcc0cc \
         --color=border:#ccd0da,label:#4c4f69"
       else
-        # Catppuccin Latte (Light) color scheme for fzf
+        # Catppuccin Mocha (Dark) color scheme for fzf
         export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
         --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
         --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
@@ -114,7 +114,13 @@ ZGEN_RESET_ON_CHANGE=(
   ${DOTFILES}/lib/*.zsh
 )
 
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+if [[ $commands[kubectl] ]]; then
+  () {
+    local cache=$HOME/.cache/kubectl_completion.zsh
+    [[ ! -f $cache || $commands[kubectl] -nt $cache ]] && kubectl completion zsh >$cache
+    source $cache
+  }
+fi
 
 bindkey '^y' autosuggest-accept
 
